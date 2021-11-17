@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
 .container {
     height: 100vh;
     width: 100%;
@@ -12,7 +17,29 @@
     flex-direction: column;
 }
 
-/* --------------------------- */
+img {
+    height: 100%;
+}
+
+ul img {
+    height: 20px;
+    vertical-align: text-bottom;
+}
+
+ul li {
+    list-style: none;
+    height: 30px;
+    line-height: 30px;
+}
+
+.fas {
+    font-size: 40px;
+    vertical-align: middle;
+}
+
+.logo-small {
+    display: none;
+}
 
 main {
     height: calc(100% - 80px);
@@ -20,10 +47,80 @@ main {
     display: flex;
 }
 
+/* --------------------------- */
+/* sidebar */
+
 .sidebar {
     width: 250px;
+    padding: 20px;
     background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #A3A3A3;
+    font-size: 13px;
 }
+
+.sidebar-start {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    height: 40px;
+}
+
+.sidebar-nav {
+    margin: 20px 0;   
+}
+
+.sidebar span, .playlist span {
+    margin-left: 5px;
+}
+
+.playlist h3 {
+    color: #fff;
+}
+
+.create-playlist {
+    height: 40px;
+    margin: 10px 0 15px 0;
+    font-size: 15px;
+}
+
+.sidebar-end {
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-end img {
+    height: 100%;
+}
+
+.download {
+    height: 40px;
+    padding: 12px 0;
+    margin: 15px 0;
+    font-size: 12px;
+    border-bottom: 1px #A3A3A3 solid;
+}
+
+.download img {
+    vertical-align: text-bottom;
+}
+
+.profile {
+    height: 40px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.profile img {
+    background-color: grey;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+/* main */
 
 .main-container {
     width: calc(100% - 250px);
@@ -46,4 +143,27 @@ footer {
     background-color: #282828;
     height: 80px;
     width: 100%;
+}
+
+
+@media screen and (max-width: 575px) {
+
+    .sidebar {
+        width: 50px;
+        padding: 10px;
+        background-color: #000;
+    }
+
+    .sidebar-start, .sidebar-end {
+        align-items: center;
+    }
+
+    .sidebar-nav span, .playlist, .playlist-name, .logo, .sidebar-end span {
+        display: none;
+    }
+
+    .logo-small {
+        display: block;
+        height: 25px;
+    }
 }
