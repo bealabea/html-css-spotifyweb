@@ -132,6 +132,9 @@ main {
     background-color: #000;
     opacity: 0.6;
     position: fixed;
+    display: flex;
+    justify-content: end;
+    align-items: center;    
 }
 
 .box-items {
