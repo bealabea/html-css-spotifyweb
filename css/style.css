@@ -59,6 +59,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: hidden;
 }
 
 .sidebar-start {
