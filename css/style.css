@@ -107,7 +107,7 @@ a {
 
 .sidebar-nav li:hover,
 .playlist-name li:hover {
-    border-left: 2px #4ef11c solid;
+    border-left: 2px #B2EC50 solid;
     padding-left: 10px;
 }
 
@@ -210,7 +210,7 @@ nav a {
 }
 
 nav a:hover {
-    border-bottom: 2px #4ef11c solid;   
+    border-bottom: 2px #B2EC50 solid;   
 }
 
 /* album */
@@ -304,6 +304,7 @@ footer {
 .player-left,
 .player-right {
     height: 100%;
+    width: calc(100% / 3);
     max-width: 250px;
     display: flex;
     align-items: center;
@@ -420,7 +421,52 @@ footer {
 
 /* range bar */
 
-input[type='range'] {
+.music-slider{
+    height: 3px;
+    width: 50%;
+    background-color: #7D7F84;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.volume-slider{
+    height: 3px;
+    width: 70%;
+    background-color: #7D7F84;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slider {
+    height: 100%;
+    width: 25%;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+}
+
+.slider-control{
+    background-color: white;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    border-radius: 50%;
+    display: none;
+}
+
+.music-slider:hover .slider,
+.volume-slider:hover .slider {
+    background-color: #B2EC50;
+}
+
+.music-slider:hover .slider-control,
+.volume-slider:hover .slider-control{
+    display: block;
+}
+
+/* input[type='range'] {
     overflow: hidden;
     height: 3px;
     width: 70%;
@@ -464,7 +510,7 @@ input[type='range']::-webkit-slider-thumb:hover {
     -webkit-appearance: none;
     background-color: #434343;
     border-radius: 50px;
-}
+} */
 
 @media screen and (max-width: 1199px) {
 
